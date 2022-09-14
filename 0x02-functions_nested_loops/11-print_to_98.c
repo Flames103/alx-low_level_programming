@@ -1,29 +1,44 @@
 #include <stdio.h>
-
 /**
- * main - natural numbers multiples of 3 or 5 to 1024
- *
- * Return: always 0
- */
-
-int main(void)
+* print_to_98 - function
+*
+* @n: parameter
+*
+* Return: natural numbers
+*/
+void print_to_98(int n)
 {
-	int s, t, f, tm, fm;
+	int upper = 98;
 
-	s = 0;
-	for (t = 0; t <= (1024 / 3); t++)
+	if (n > upper)
 	{
-		tm = 3 * t;
-		s = s + tm;
-	}
-	for (f = 0; f <= (1024 / 5); f++)
-	{
-		if (!(f % 3 == 0))
+		while (n >= upper)
 		{
-			fm = 5 * f;
-			s = s + fm;
+			if (n != upper)
+			{
+				printf("%d%s", n, ", ");
+			}
+			else
+			{
+				printf("%d", n);
+			}
+			n--;
 		}
 	}
-	printf("%i\n", s);
-	return (0);
+	else
+	{
+		while (n <= upper)
+		{
+			if (n != upper)
+			{
+				printf("%d%s", n, ", ");
+			}
+			else
+			{
+				printf("%d", n);
+			}
+			n++;
+		}
+	}
+	putchar(10);
 }
