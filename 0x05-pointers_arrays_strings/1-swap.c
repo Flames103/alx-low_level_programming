@@ -1,27 +1,17 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 #include "main.h"
 
 /**
- * main - entry point
- *
- * Return: generated password
+ * swap_int - swap the valuses of two integers a and b
+ *@a: A pointer to an int that will be updated
+ *@b: B pointer to an int that will be updated
+ * Return: void that means our answer is correct
  */
 
-int main(void)
+void swap_int(int *a, int *b)
 {
-	char c;
-	int x;
+int f;
 
-	srand(time(0));
-	while (x <= 2645)
-	{
-		c = rand() % 128;
-		x += c;
-		putchar(c);
-	}
-	putchar(2772 - x);
-
-	return (0);
+f = *a;
+*a = *b;
+*b = f;
 }
